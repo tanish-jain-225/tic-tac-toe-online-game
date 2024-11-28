@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+/*google fonts online font import above...*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(46, 5, 54);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gamecontainer {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: grid;
+    font-family: 'Roboto', 'sans-serif';
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 10vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.info {
+    font-size: 20px;
+}
+
+.gameinfo {
+    padding: 0 34px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.imgbox img {
+    /* display: none;     */
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 3px;
+    border: 2px solid black;
+    padding: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(220, 220, 220);
+}
+
+#reset:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+/* media query responsivness */
+
+@media screen and (max-width: 610px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+
+    nav {
+        font-size: 20px;
+        padding: 0, 10px;
+    }
+
+    #reset {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .gameinfo h1 {
+        font-size: 1.2rem;
+    }
+}
